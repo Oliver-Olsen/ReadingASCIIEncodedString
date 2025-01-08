@@ -17,6 +17,7 @@
 #define LED_BLUE 13
 
 
+// Used pins, storred in array for quick initializations.
 int pins[3] = {
   LED_RED, 
   LED_GREEN, 
@@ -27,14 +28,17 @@ int pins[3] = {
 void setup() {
   Serial.begin(9600); 
 
+  // Initialises the used pins for the rgb LED
   for (int i = 0; i < 3; i++) {
     pinMode(pins[i], OUTPUT); 
     digitalWrite(pins[i], LOW); 
   }
 }
 
+
 void loop() {
   if (Serial.available() > 0) {
+    // The loop sets the value of the pins depending on the incoming string.
     for (int i = 0; 0 < Serial.available(); i++) {
       int k = Serial.read(); 
       k = Serial.parseInt(); 
