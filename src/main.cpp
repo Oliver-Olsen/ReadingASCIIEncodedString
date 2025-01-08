@@ -1,3 +1,5 @@
+//Code is made for the Arduino Mega 2560
+
 //Oliver Olsen s205443
 //Nils Wulff   s223968
 
